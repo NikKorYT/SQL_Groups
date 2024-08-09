@@ -31,6 +31,7 @@ CREATE TABLE
     tutors (
         tutor_id INTEGER PRIMARY KEY AUTOINCREMENT,
         name VARCHAR(100) NOT NULL
+        
     );
 
 -- Creating table subjects
@@ -53,6 +54,7 @@ CREATE TABLE
         student_id INTEGER,
         subject_id INTEGER,
         mark TINYINT,
+        mark_time DATETIME,
         FOREIGN KEY (student_id) REFERENCES students (student_id) ON DELETE CASCADE ON UPDATE CASCADE,
         FOREIGN KEY (subject_id) REFERENCES subjects (subject_id) ON DELETE CASCADE ON UPDATE CASCADE
     );
